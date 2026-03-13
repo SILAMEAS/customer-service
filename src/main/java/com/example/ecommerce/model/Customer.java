@@ -1,5 +1,6 @@
 package com.example.ecommerce.model;
 
+import com.lacy.core.entity.AbstractTimestamp;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -22,7 +23,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @Builder
-public class Customer {
+public class Customer extends AbstractTimestamp {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
